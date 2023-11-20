@@ -26,7 +26,7 @@ cp $REPO_DIR_TERMUX/$REPO_NAME/shortcuts/icons/debian-code-server.sh.png $SHORTC
 # install Proot-Distro Debian
 echo "Setting up Proot-Distro Debian..."
 apt install -y git build-essential
-apt install proot-distro
+apt install -y proot-distro
 proot-distro install debian
 proot-distro login debian -- apt update -y
 proot-distro login debian -- apt install -y git build-essential python-is-python3 python3 python3-pip nodejs npm
