@@ -2,7 +2,7 @@
 REPO_DIR_DISTRO=/sdcard/Download
 REPO_DIR_TERMUX=~/storage/shared/Download
 REPO_NAME=setup-termux-debian-code-server
-SHORTCUTS_DIR=~/.termux/boot/
+SHORTCUTS_DIR=.shortcuts
 VERSION=4.19
 
 # download code-server
@@ -15,11 +15,13 @@ curl -fOL https://github.com/coder/code-server/releases/download/v$VERSION/code-
 mv ./code-server_${VERSION}_arm64.deb $REPO_DIR_TERMUX
 
 # shortcut
-echo "Setting up Termux:Boot Debian shortcut..."
+echo "Setting up Termux Widget Debian shortcut..."
 cd ~
 mkdir $SHORTCUTS_DIR
-cp $REPO_DIR_TERMUX/$REPO_NAME/boot/debian-code-server.sh $SHORTCUTS_DIR
-chmod +x $SHORTCUTS_DIR/debian-code-server.sh
+cp $REPO_DIR_TERMUX/$REPO_NAME/shortcuts/debian-code-server.sh $SHORTCUTS_DIR
+chmod +x $REPO_DIR_TERMUX/$REPO_NAME/debian-code-server.sh
+mkdir $SHORTCUTS_DIR/icons
+cp $REPO_DIR_TERMUX/$REPO_NAME/shortcuts/icons/debian-code-server.sh.png $SHORTCUTS_DIR/icons
 
 # install Proot-Distro Debian
 echo "Setting up Proot-Distro Debian..."
@@ -38,5 +40,12 @@ echo ""
 echo "Start code-server with:"
 echo "    proot-distro login debian -- code-server --auth none --port 13880"
 echo ""
-echo "or restart Your Android Device"
+echo "For automatically starting Termux with code-server progressive web app"
+echo "at least for SAMSUNG devices You can do the following:"
+echo "    1. install Termux widget, add widget debian-code-server.sh, start widget"
+echo "    2. goto localhost:13880 and install as progressive web app"
+echo "    3. create new Routine:"
+echo "       - IF App started > select code-server progressive web app"
+echo "       - THEN Apps > Open App or execute App-Action > select debian-code-server.sh widget"
+echo "       - save Routine"
 echo ""
