@@ -5,7 +5,6 @@ Setup Termux with minimal Proot-Distro running code-server.
 ### Prerequisites
 Install Termux at first.
 - Install Termux App (see https://github.com/termux/termux-app/releases).
-- Install Termux Widget (see https://github.com/termux/termux-widget/releases).
 - Clone this repo:
 
 ```bash
