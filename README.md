@@ -26,7 +26,7 @@ cd ~ && cp ~/storage/shared/Download/setup-termux-debian-code-server/install-deb
 ## Optionally remove this Git repository clone
 
 ```bash
-rm ~/install-debian.sh.sh
+rm ~/install-debian.sh
 ```
 
 ```bash
