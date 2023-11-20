@@ -3,16 +3,17 @@ REPO_DIR_DISTRO=/sdcard/Download
 REPO_DIR_TERMUX=~/storage/shared/Download
 REPO_NAME=setup-termux-debian-code-server
 SHORTCUTS_DIR=.shortcuts
-VERSION=4.19
+#FIXME: VERSION=4.19.0
 
 # download code-server
 termux-setup-storage
 apt update -y
-apt install -y curl
+apt install -y curl wget
 echo "Downloading code-server..."
 cd ~
-curl -fOL https://github.com/coder/code-server/releases/download/v$VERSION/code-server_${VERSION}_arm64.deb
-mv ./code-server_${VERSION}_arm64.deb $REPO_DIR_TERMUX
+#FIXME: wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v${VERSION}code-server_${VERSION}_arm64.deb'
+wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v4.19.0/code-server_4.19.0_arm64.deb'
+mv ./code-server-install.deb $REPO_DIR_TERMUX
 
 # shortcut
 echo "Setting up Termux Widget Debian shortcut..."
@@ -33,7 +34,7 @@ proot-distro login debian -- apt install -y git build-essential python-is-python
 
 # install code-server
 echo "Setting up code-server..."
-proot-distro login debian -- apt install -y $REPO_DIR_DISTRO/code-server_${VERSION}_arm64.deb
+proot-distro login debian -- apt install -y $REPO_DIR_DISTRO/code-server-install.deb
 
 echo "Done :)"
 echo ""
