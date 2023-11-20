@@ -18,7 +18,7 @@ mv ./code-server_${VERSION}_arm64.deb $REPO_DIR_TERMUX
 echo "Setting up Termux:Boot Debian shortcut..."
 cd ~
 mkdir $SHORTCUTS_DIR
-cp $REPO_DIR/boot/debian-code-server.sh $SHORTCUTS_DIR
+cp $REPO_DIR_TERMUX/$REPO_NAME/boot/debian-code-server.sh $SHORTCUTS_DIR
 chmod +x $SHORTCUTS_DIR/debian-code-server.sh
 
 # install Proot-Distro Debian
@@ -31,5 +31,12 @@ proot-distro login debian -- apt install -y git build-essential python-is-python
 
 # install code-server
 echo "Setting up code-server..."
-proot-distro login debian -- apt install -y /sdcard/Download/code-server_*_arm64.deb
-#proot-distro login debian -- code-server --auth none --port 13880
+proot-distro login debian -- apt install -y $REPO_DIR_DISTRO/code-server_${VERSION}_arm64.deb
+
+echo "Done :)"
+echo ""
+echo "Start code-server with:"
+echo "    proot-distro login debian -- code-server --auth none --port 13880"
+echo ""
+echo "or restart Your Android Device"
+echo ""
