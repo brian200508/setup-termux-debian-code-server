@@ -40,6 +40,5 @@ Done.
  - Termux App (https://github.com/termux/termux-app)
  - Termux:Boot (https://github.com/termux/termux-boot)
  - VSCode/Code-OSS (https://github.com/microsoft/vscode)
- - PlatformIO (https://platformio.org)
- 
+
 Very best regards and Thanks to all of You. Great work!!! :)
