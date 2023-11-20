@@ -20,7 +20,7 @@ git clone https://github.com/brian200508/setup-termux-debian-code-server ~/stora
 Install proot-distro Debian with code-server and Termux:Boot shortcuts.
 
 ```bash
-cd ~ && cp ~/storage/shared/Download/setup-termux-debian-code-server/install-debian.sh . &&  chmod +x ~/setup-udroid-and-shortcuts.sh && ./install-debian.sh
+cd ~ && cp ~/storage/shared/Download/setup-termux-debian-code-server/install-debian.sh . &&  chmod +x ~/install-debian.sh && ./install-debian.sh
 ```
 
 ## Optionally remove this Git repository clone
