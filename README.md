@@ -1,11 +1,10 @@
 # setup-termux-debian-code-server
-Setup Termux:Boot with minimal Proot-Distro running code-server.
+Setup Termux with minimal Proot-Distro running code-server.
 
 ## Steps
 ### Prerequisites
 Install Termux at first.
 - Install Termux App (see https://github.com/termux/termux-app/releases).
-- Install Termux:Boot App (see https://github.com/termux/termux-boot/releases).
 - Clone this repo:
 
 ```bash
@@ -38,7 +37,6 @@ Done.
 ## Projects referred
  - code-server (https://github.com/coder/code-server)
  - Termux App (https://github.com/termux/termux-app)
- - Termux:Boot (https://github.com/termux/termux-boot)
  - VSCode/Code-OSS (https://github.com/microsoft/vscode)
 
 Very best regards and Thanks to all of You. Great work!!! :)
