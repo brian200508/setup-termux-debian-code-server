@@ -36,6 +36,13 @@ proot-distro login debian -- apt install -y git build-essential python-is-python
 echo "Setting up code-server..."
 proot-distro login debian -- apt install -y $REPO_DIR_DISTRO/code-server-install.deb
 
+# add to .bashrc
+echo "Adding code-server to .bashrc for autostart..."
+echo '' >> ~/.bashrc
+echo '#Start code-server if not running' >> ~/.bashrc
+echo 'if ps aux | grep -q "[c]ode-server --auth none --port 13880" ; then echo "code-server is already running." ; else code-server --auth none --port 13880 ; fi' >> ~/.bashrc
+echo '' >> ~/.bashrc
+
 echo "Done :)"
 echo ""
 echo "Start code-server with:"
@@ -47,6 +54,8 @@ echo "    1. install Termux widget, add widget debian-code-server.sh, start widg
 echo "    2. goto localhost:13880 and install as progressive web app"
 echo "    3. create new Routine:"
 echo "       - IF App started > select code-server progressive web app"
-echo "       - THEN Apps > Open App or execute App-Action > select debian-code-server.sh widget"
+echo "       - THEN Apps > Open App or execute App-Action > select Termux"
 echo "       - save Routine"
 echo ""
+
+source ~/.bashrc
