@@ -32,4 +32,4 @@ proot-distro login debian -- apt install -y git build-essential python-is-python
 # install code-server
 echo "Setting up code-server..."
 proot-distro login debian -- apt install -y /sdcard/Download/code-server_*_arm64.deb
-#proot-distro login debian -- code-server --auth none --port 8081
+#proot-distro login debian -- code-server --auth none --port 13880
