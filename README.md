@@ -15,17 +15,29 @@ termux-setup-storage && pkg update -y && pkg install -y git build-essential
 git clone https://github.com/brian200508/setup-termux-debian-code-server ~/storage/shared/Download/setup-termux-debian-code-server
 ```
 
-## Install
-Install proot-distro Debian with code-server and Termux:Boot shortcuts.
+## Install Debian
+Install proot-distro Debian with code-server and Termux Widget shortcuts.
 
 ```bash
 cd ~ && cp ~/storage/shared/Download/setup-termux-debian-code-server/install-debian.sh . &&  chmod +x ~/install-debian.sh && ./install-debian.sh
+```
+
+## Or: Install Ubuntu
+Install proot-distro Ubuntu with code-server and Termux Widget shortcuts.
+
+```bash
+cd ~ && cp ~/storage/shared/Download/setup-termux-debian-code-server/install-ubuntu.sh . &&  chmod +x ~/install-ubuntu.sh && ./install-ubuntu.sh
 ```
 
 ## Optionally remove this Git repository clone
 
 ```bash
 rm ~/install-debian.sh
+```
+
+or:
+```bash
+rm ~/install-ubuntu.sh
 ```
 
 ```bash
