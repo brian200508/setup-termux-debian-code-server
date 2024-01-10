@@ -1,6 +1,6 @@
 #!/bin/bash
 REPO_DIR_DISTRO=/sdcard/Download
-REPO_DIR_TERMUX=~/storage/shared/Download
+REPO_DIR_TERMUX=/sdcard/Download
 REPO_NAME=setup-termux-debian-code-server
 SHORTCUTS_DIR=.shortcuts
 #FIXME: VERSION=4.19.0

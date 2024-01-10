@@ -5,28 +5,38 @@ Setup Termux with minimal Proot-Distro running code-server.
 ### Prerequisites
 Install Termux at first.
 - Install Termux App (see https://github.com/termux/termux-app/releases).
-- Clone this repo:
+- Setup storage access and install Git:
 
+#### Android 13 and earlier
 ```bash
-termux-setup-storage && pkg update -y && pkg install -y git build-essential
+termux-setup-storage && pkg update -y && pkg install -y git
 ```
 
+#### Android 14
+Since Android 14 the command ```termux-setup-storage``` does not work any longer due to new memory access restrictions.
+- Go to Android Setup Menu, search for ```Apps```, scroll to ```Termux``` and grant full Storage access to Termux.
+- Afterwards open Termux and continue with:
 ```bash
-git clone https://github.com/brian200508/setup-termux-debian-code-server ~/storage/shared/Download/setup-termux-debian-code-server
+pkg update -y && pkg install -y git
+```
+
+### Clone this repository
+```bash
+git clone https://github.com/brian200508/setup-termux-debian-code-server /sdcard/Download/setup-termux-debian-code-server
 ```
 
 ## Install Debian
 Install proot-distro Debian with code-server and Termux Widget shortcuts.
 
 ```bash
-cd ~ && cp ~/storage/shared/Download/setup-termux-debian-code-server/install-debian.sh . &&  chmod +x ~/install-debian.sh && ./install-debian.sh
+cd ~ && cp /sdcard/Download/setup-termux-debian-code-server/install-debian.sh . &&  chmod +x ~/install-debian.sh && ./install-debian.sh
 ```
 
 ## Or: Install Ubuntu
 Install proot-distro Ubuntu with code-server and Termux Widget shortcuts.
 
 ```bash
-cd ~ && cp ~/storage/shared/Download/setup-termux-debian-code-server/install-ubuntu.sh . &&  chmod +x ~/install-ubuntu.sh && ./install-ubuntu.sh
+cd ~ && cp /sdcard/Download/setup-termux-debian-code-server/install-ubuntu.sh . &&  chmod +x ~/install-ubuntu.sh && ./install-ubuntu.sh
 ```
 
 ## Optionally remove this Git repository clone
