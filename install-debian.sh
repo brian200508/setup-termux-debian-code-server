@@ -30,7 +30,7 @@ apt install -y git build-essential
 apt install -y proot-distro
 proot-distro install debian
 proot-distro login debian -- apt update -y
-proot-distro login debian -- apt install -y git build-essential python-is-python3 python3 python3-pip nodejs npm
+proot-distro login debian -- apt install -y git build-essential python-is-python3 python3 python3-pip python3-venv nodejs npm
 
 # install code-server
 echo "Setting up code-server..."
