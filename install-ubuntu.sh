@@ -3,7 +3,7 @@ REPO_DIR_DISTRO=/sdcard/Download
 REPO_DIR_TERMUX=/sdcard/Download
 REPO_NAME=setup-termux-debian-code-server
 SHORTCUTS_DIR=.shortcuts
-#FIXME: VERSION=4.19.0
+#FIXME: VERSION=4.90.3
 
 # download code-server
 termux-setup-storage
@@ -12,7 +12,7 @@ apt install -y curl wget
 echo "Downloading code-server..."
 cd ~
 #FIXME: wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v${VERSION}code-server_${VERSION}_arm64.deb'
-wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v4.19.0/code-server_4.19.0_arm64.deb'
+wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v4.90.3/code-server_4.90.3_arm64.deb'
 mv ./code-server-install.deb $REPO_DIR_TERMUX
 
 # shortcut
