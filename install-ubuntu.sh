@@ -7,8 +7,8 @@ SHORTCUTS_DIR=.shortcuts
 
 # download code-server
 #termux-setup-storage
-pkg update -y
-pkg install -y curl wget
+apt update -y
+apt install -y curl wget
 echo "Downloading code-server..."
 cd ~
 #FIXME: wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v${VERSION}code-server_${VERSION}_arm64.deb'
@@ -26,8 +26,8 @@ cp $REPO_DIR_TERMUX/$REPO_NAME/shortcuts/icons/ubuntu-code-server.sh.png $SHORTC
 
 # install Proot-Distro Ubuntu
 echo "Setting up Proot-Distro Ubuntu..."
-pkg install -y git build-essential
-pkg install -y proot-distro
+apt install -y git build-essential
+apt install -y proot-distro
 proot-distro install ubuntu
 proot-distro login ubuntu -- apt update -y
 proot-distro login ubuntu -- apt install -y git build-essential python-is-python3 python3 python3-pip python3-venv nodejs npm
