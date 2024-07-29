@@ -22,21 +22,21 @@ pkg update -y && pkg install -y git
 
 ### Clone this repository
 ```bash
-git clone https://github.com/brian200508/setup-termux-debian-code-server /sdcard/Download/setup-termux-debian-code-server
+git clone https://github.com/brian200508/setup-termux-debian-code-server ~/storage/downloads/setup-termux-debian-code-server
 ```
 
 ## Install Debian
 Install proot-distro Debian with code-server and Termux Widget shortcuts.
 
 ```bash
-cd ~ && cp /sdcard/Download/setup-termux-debian-code-server/install-debian.sh . &&  chmod +x ~/install-debian.sh && ./install-debian.sh
+cd ~ && cp ~/storage/downloads/setup-termux-debian-code-server/install-debian.sh . &&  chmod +x ~/install-debian.sh && ./install-debian.sh
 ```
 
 ## Or: Install Ubuntu
 Install proot-distro Ubuntu with code-server and Termux Widget shortcuts.
 
 ```bash
-cd ~ && cp /sdcard/Download/setup-termux-debian-code-server/install-ubuntu.sh . &&  chmod +x ~/install-ubuntu.sh && ./install-ubuntu.sh
+cd ~ && cp ~/storage/downloads/setup-termux-debian-code-server/install-ubuntu.sh . &&  chmod +x ~/install-ubuntu.sh && ./install-ubuntu.sh
 ```
 
 ## Optionally remove this Git repository clone
@@ -52,7 +52,7 @@ rm ~/install-ubuntu.sh
 
 remove cloned repo:
 ```bash
-rm -rf /sdcard/Download/setup-termux-debian-code-server
+rm -rf ~/storage/downloads/setup-termux-debian-code-server
 ```
 
 Done.
