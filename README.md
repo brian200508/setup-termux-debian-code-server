@@ -7,13 +7,11 @@ Install Termux at first.
 - Install Termux App (see https://github.com/termux/termux-app/releases).
 - Setup storage access and install Git:
 
-#### Android 13 and earlier - or Amdroid 14 with Termux 0.118.1
 ```bash
 termux-setup-storage && pkg update -y && pkg install -y git
 ```
 
-#### Android 14 (with Termux 0.118.0)
-Since Android 14 the command ```termux-setup-storage``` does not work any longer due to new memory access restrictions.
+If ˋˋˋtermux-setup-storageˋˋˋ will not work, You can use this as a workaround:
 - Go to Android Setup Menu, search for ```Apps```, scroll to ```Termux``` and grant full Storage access to Termux.
 - Afterwards open Termux and continue with:
 ```bash
