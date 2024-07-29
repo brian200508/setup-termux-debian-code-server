@@ -6,7 +6,7 @@ SHORTCUTS_DIR=.shortcuts
 #FIXME: VERSION=4.91.1
 
 # download code-server
-termux-setup-storage
+#termux-setup-storage
 pkg update -y
 pkg install -y curl wget
 echo "Downloading code-server..."
