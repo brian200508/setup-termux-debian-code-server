@@ -11,7 +11,7 @@ Install Termux at first.
 termux-setup-storage && pkg update -y && pkg install -y git
 ```
 
-If ˋˋˋtermux-setup-storageˋˋˋ will not work, You can use this as a workaround:
+If ```termux-setup-storage``` will not work, You can use this as a workaround:
 - Go to Android Setup Menu, search for ```Apps```, scroll to ```Termux``` and grant full Storage access to Termux.
 - Afterwards open Termux and continue with:
 ```bash
