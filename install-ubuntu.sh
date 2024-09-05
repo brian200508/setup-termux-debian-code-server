@@ -3,7 +3,7 @@ REPO_DIR_DISTRO=~/storage/downloads
 REPO_DIR_TERMUX=~/storage/downloads
 REPO_NAME=setup-termux-debian-code-server
 SHORTCUTS_DIR=.shortcuts
-#FIXME: VERSION=4.91.1
+#FIXME: VERSION=4.92.2
 
 # download code-server
 #termux-setup-storage
@@ -13,7 +13,7 @@ apt update -y && apt upgrade -y
 echo "Downloading code-server..."
 cd ~
 #FIXME: wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v${VERSION}code-server_${VERSION}_arm64.deb'
-wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v4.91.1/code-server_4.91.1_arm64.deb'
+wget -O ~/code-server-install.deb 'https://github.com/coder/code-server/releases/download/v4.92.2/code-server_4.92.2_arm64.deb'
 mv ./code-server-install.deb $REPO_DIR_TERMUX
 
 # shortcut
